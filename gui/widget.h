@@ -2,7 +2,7 @@
 #define WIDGET_H
 
 #include <QWidget>
-#include <QFormLayout>
+#include <QGridLayout>
 #include <QLabel>
 #include <QTextEdit>
 #include <QPushButton>
@@ -19,17 +19,13 @@ public:
     ~Widget();
 private:
     //declaring main layout
-    QFormLayout *mainLayout;
+    QGridLayout *mainLayout;
     //declaring encryptor and decryptor
     Encryptor encrypt;
     Decryptor decrypt;
     //declaring text edits
     QTextEdit *leftEdit;
     QTextEdit *rightEdit;
-    //declaring labels
-    QLabel *modifying;
-    QLabel *result;
-    QLabel *key;
     //declaring button to modify text
     QPushButton *modify;
     //declaring combobox

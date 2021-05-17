@@ -1,10 +1,16 @@
 #include "cryptobase.h"
 
+#include <QDebug>
+
 CryptoBase::CryptoBase(QString text, QString key){
     text_ = text;
     key_ = key;
     for (int i = 32; i < 127; i++){
         symbols.push_back(QChar(i));
+    }
+    QString russian = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя";
+    for (int i = 0; i < russian.size(); i++){
+        symbols.push_back(russian[i]);
     }
 }
 
