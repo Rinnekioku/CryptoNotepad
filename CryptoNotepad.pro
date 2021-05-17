@@ -1,5 +1,6 @@
 QT       += core gui \
-    widgets
+    widgets \
+    core
 
 greaterThan(QT_MAJOR_VERSION, 5): QT += widgets
 CONFIG += c++11

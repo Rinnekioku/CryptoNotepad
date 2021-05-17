@@ -2,11 +2,7 @@
 
 Widget::Widget(QWidget *parent) : QWidget(parent){
     //init main layout
-    mainLayout = new QFormLayout;
-    //init labels
-    modifying = new QLabel("Type here text to encrypt or decrypt");
-    result = new QLabel("Result");
-    key = new QLabel("Key");
+    mainLayout = new QGridLayout;
     //init text edits
     leftEdit = new QTextEdit;
     leftEdit->setPlaceholderText("Type here text to decrypt or encrypt");
@@ -22,10 +18,11 @@ Widget::Widget(QWidget *parent) : QWidget(parent){
     mode->insertItem(0, "Encrypt");
     mode->insertItem(1, "Decrypt");
     //filling layout
-    mainLayout->addRow(modifying, result);
-    mainLayout->addRow(leftEdit, rightEdit);
-    mainLayout->addRow(key, keyEdit);
-    mainLayout->addRow(mode, modify);
+    mainLayout->addWidget(leftEdit, 0, 0);
+    mainLayout->addWidget(rightEdit, 0, 1);
+    mainLayout->addWidget(keyEdit, 1, 0, 1, 2, Qt::AlignCenter);
+    mainLayout->addWidget(mode, 2, 0);
+    mainLayout->addWidget(modify, 2, 1);
     //setting layout
     setLayout(mainLayout);
 
@@ -33,7 +30,12 @@ Widget::Widget(QWidget *parent) : QWidget(parent){
 }
 
 Widget::~Widget(){
-
+    delete mainLayout;
+    delete leftEdit;
+    delete rightEdit;
+    delete modify;
+    delete mode;
+    delete keyEdit;
 }
 
 void Widget::modifyText(){
