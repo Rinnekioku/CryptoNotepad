@@ -2,7 +2,6 @@
 
 #include <QApplication>
 #include <QDebug>
-#include <QTextCodec>
 
 int main(int argc, char *argv[])
 {
