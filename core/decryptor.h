@@ -11,7 +11,7 @@ class Decryptor : public CryptoBase
 {
 public:
     //declaring decryptor constructor
-    explicit Decryptor(QString text = "", QString key = "");
+    Decryptor(QString text = "", QString key = "");
     //declaring decrypt function
     QString decrypt();
 };

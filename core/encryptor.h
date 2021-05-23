@@ -10,7 +10,7 @@ class Encryptor : public CryptoBase
 {
 public:
     //declaring encryptor constructor
-    explicit Encryptor(QString text = "", QString key = "");
+    Encryptor(QString text = "", QString key = "");
     //declaring encrypt function
     QString encrypt();
 };

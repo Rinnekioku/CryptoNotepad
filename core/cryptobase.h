@@ -9,7 +9,7 @@
 class CryptoBase{
 public:
     //declaring constructor for base class
-    explicit CryptoBase(QString text = "", QString key = "");
+    CryptoBase(QString text = "", QString key = "");
     //declaring key getter
     QString getKey() const;
     //declaring setter for key

@@ -5,7 +5,7 @@
 CryptoBase::CryptoBase(QString text, QString key){
     text_ = text;
     key_ = key;
-    for (int i = 32; i < 127; i++){
+    for (int i = 0; i < 127; i++){
         symbols.push_back(QChar(i));
     }
     QString russian = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя";
